@@ -7,18 +7,25 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo">YouTube Clone</div>
-    <input type="text" placeholder="Search" class="search-box">
+  <header class="header">
+    <div class="logo">YouTube</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search" class="search-input">
+      <button class="search-btn">🔍</button>
+    </div>
+    <div class="user-options">
+      <button class="user-btn">🔔</button>
+      <button class="user-btn">👤</button>
+    </div>
   </header>
 
   <main>
-    <div class="video-list">
+    <section class="video-section">
       <div class="video-card" onclick="window.location.href='video.html?id=1'">
         <img src="https://via.placeholder.com/320x180" alt="Video 1">
         <div class="video-info">
           <h3>Video Title 1</h3>
-          <p>Some description of the video.</p>
+          <p>2M views · 2 days ago</p>
         </div>
       </div>
 
@@ -26,7 +33,7 @@
         <img src="https://via.placeholder.com/320x180" alt="Video 2">
         <div class="video-info">
           <h3>Video Title 2</h3>
-          <p>Another description of the video.</p>
+          <p>1.5M views · 5 days ago</p>
         </div>
       </div>
 
@@ -34,10 +41,22 @@
         <img src="https://via.placeholder.com/320x180" alt="Video 3">
         <div class="video-info">
           <h3>Video Title 3</h3>
-          <p>Yet another video description.</p>
+          <p>3M views · 1 week ago</p>
         </div>
       </div>
-    </div>
+
+      <!-- Add more video cards as needed -->
+    </section>
   </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Press</a>
+      <a href="#">Copyright</a>
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
 </body>
 </html>

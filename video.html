@@ -7,9 +7,16 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo">YouTube Clone</div>
-    <input type="text" placeholder="Search" class="search-box">
+  <header class="header">
+    <div class="logo">YouTube</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search" class="search-input">
+      <button class="search-btn">🔍</button>
+    </div>
+    <div class="user-options">
+      <button class="user-btn">🔔</button>
+      <button class="user-btn">👤</button>
+    </div>
   </header>
 
   <div class="video-player">
@@ -18,22 +25,30 @@
       <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-
     <div class="video-description">
-      <h3>Description:</h3>
-      <p>This is a description of the video content. You can edit this text with more information about the video.</p>
+      <p>Uploaded 2 days ago by Channel Name</p>
+      <p>This is a description of the video content. More details about the video can be written here.</p>
     </div>
 
-    <div class="comments-section">
+    <div class="comment-section">
       <h3>Comments</h3>
-      <textarea id="commentInput" placeholder="Write a comment..."></textarea>
+      <textarea id="commentInput" placeholder="Add a public comment..."></textarea>
       <button onclick="addComment()">Post Comment</button>
-
       <div id="comments">
         <!-- Comments will appear here -->
       </div>
     </div>
   </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Press</a>
+      <a href="#">Copyright</a>
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
 
   <script>
     function addComment() {
@@ -42,7 +57,7 @@
         alert("Please enter a comment!");
         return;
       }
-      
+
       const commentDiv = document.createElement('div');
       commentDiv.classList.add('comment');
       commentDiv.textContent = commentText;
